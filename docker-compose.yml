@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: php-desafio-01
+    container_name: php-desafio-01-uri
     restart: unless-stopped
     command: bash -c "composer install && php-fpm"
     working_dir: /var/www
@@ -17,12 +17,12 @@ services:
   #Nginx Service
   nginx:
     image: nginx:alpine
-    container_name: nginx-desafio-01
+    container_name: nginx-desafio-01-uri
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
-      - "443:443"
+      - "1010:80"
+      - "10101:443"
     volumes:
       - ./src/:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/

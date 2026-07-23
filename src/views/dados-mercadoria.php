@@ -1,15 +1,8 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <title>Desafio 01</title>
-</head>
-<body class="antialiased font-sans bg-gray-200 overflow-hidden align-middle"><div class="" style="">
-  <div class="max-w-4xl mx-auto h-screen flex flex-wrap content-center">
-    <a href="/" class="py-2 px-4 bg-green-500 text-white shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-      Voltar
+  <div class="max-w-4xl mx-auto py-16 flex flex-wrap content-center">
+
+    <a href="/?mercadoria=selecione"
+       class="py-2 px-4 bg-green-500 text-white shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+        Voltar
     </a>
 
     <div class="bg-white shadow overflow-hidden sm:rounded-lg">
@@ -27,7 +20,7 @@
               Produto
             </dt>
             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              <?= $mercadoria->nome ?>
+              <?= $mercadoria['nome'] ?>
             </dd>
           </div>
 
@@ -36,7 +29,7 @@
               Valor
             </dt>
             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              R$ <?= $mercadoria->valor ?>
+              R$ <?= $mercadoria['valor'] ?>
             </dd>
           </div>
 
@@ -45,7 +38,7 @@
               Peso
             </dt>
             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              <?= $mercadoria->peso ?> kgs
+              <?= $mercadoria['peso'] ?> kgs
             </dd>
           </div>
 
@@ -54,7 +47,7 @@
               Categoria
             </dt>
             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              <?= $mercadoria->categoria->nome ?>
+              <?= $mercadoria['categoria'] ?>
             </dd>
           </div>
 
@@ -71,5 +64,3 @@
 
     </div>
   </div>
-</body>
-</html>
